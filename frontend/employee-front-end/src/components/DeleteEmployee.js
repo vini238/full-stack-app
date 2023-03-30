@@ -22,7 +22,7 @@ function DeleteEmployee(props) {
       <h3>DELETE Employee</h3>
       <form onSubmit={handleSubmit}>
         <label>
-          Id:
+          ID:
           <input type="text" value={id} onChange={e => setId(e.target.value)} />
         </label>
         <button type="submit">Delete</button>

@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
   }
   
   .update-employee-container h3 {
-    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
   }
