@@ -7,4 +7,5 @@ import java.util.UUID
 
 @Repository
 interface EmployeeRepository : JpaRepository<Employee, UUID> {
+    fun findByNameAndEmail(name: String, email: String): Employee?
 }

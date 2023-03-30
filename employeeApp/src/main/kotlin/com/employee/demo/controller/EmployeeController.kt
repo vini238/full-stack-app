@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*
 import java.util.UUID
 
 @RestController
+@CrossOrigin(origins = ["http://localhost:3000", "http://localhost:8080"])
 class EmployeeController {
 
     @Autowired
