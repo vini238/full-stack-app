@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 
-function CreateEmployee(props) {
+function UpdateEmployee() {
+  const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const employee = { name, email };
-    fetch('http://localhost:8080/create', {
-      method: 'POST',
+    fetch(`http://localhost:8080/update/${id}`, {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -16,7 +17,8 @@ function CreateEmployee(props) {
     })
       .then(response => response.json())
       .then(data => {
-        props.onCreate(data);
+        console.log(data);
+        setId('');
         setName('');
         setEmail('');
       });
@@ -24,8 +26,12 @@ function CreateEmployee(props) {
 
   return (
     <>
-    <h3>CREATE Employee</h3>
+    <h3>UPDATE Employee</h3>
     <form onSubmit={handleSubmit}>
+      <label>
+        ID:
+        <input type="text" value={id} onChange={e => setId(e.target.value)} />
+      </label>
       <label>
         Name:
         <input type="text" value={name} onChange={e => setName(e.target.value)} />
@@ -34,10 +40,10 @@ function CreateEmployee(props) {
         Email:
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
-      <button type="submit">Create</button>
+      <button type="submit">Update</button>
     </form>
     </>
   );
 }
 
-export default CreateEmployee;
+export default UpdateEmployee;

@@ -28,13 +28,18 @@ class EmployeeService {
         return employee
     }
 
-    fun updateEmployee(id: UUID, employee: Employee): Employee {
-        if (!repository.existsById(id)) {
-            throw IllegalArgumentException("Employee with ID ${employee.id} does not exist")
+    fun updateEmployee(id: UUID, updatedEmployee: Employee): Employee {
+        val existingEmployee = repository.findById(id).orElseThrow {
+            IllegalArgumentException("Employee with ID $id does not exist")
         }
-
-        repository.save(employee)
-        return employee
+        if (updatedEmployee.name.isNotEmpty()) {
+            existingEmployee.name = updatedEmployee.name
+        }
+        if (updatedEmployee.email.isNotEmpty()) {
+            existingEmployee.email = updatedEmployee.email
+        }
+        repository.save(existingEmployee)
+        return existingEmployee
     }
 
     fun deleteEmployee(id: UUID) {
