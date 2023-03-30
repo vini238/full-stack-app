@@ -1,0 +1,50 @@
+.update-employee-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .update-employee-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .update-employee-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .update-employee-container label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .update-employee-container input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  
+  .update-employee-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .update-employee-container button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  

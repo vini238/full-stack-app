@@ -1,0 +1,24 @@
+.delete-employee-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .delete-employee-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .delete-employee-container label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .delete-employee-container button[type="submit"] {
+    margin-top: 10px;
+  }
+  

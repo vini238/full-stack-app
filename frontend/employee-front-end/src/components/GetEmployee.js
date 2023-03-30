@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../style/GetEmployee.css";
 
 function EmployeeList(props) {
   const [employees, setEmployees] = useState([]);
@@ -10,7 +11,7 @@ function EmployeeList(props) {
   }, [props.shouldUpdateList]);
 
   return (
-    <table>
+    <table className="employee-table">
       <thead>
         <tr>
           <th>ID</th>

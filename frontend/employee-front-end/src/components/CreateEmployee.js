@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../style/CreateEmployee.css";
 
 function CreateEmployee(props) {
   const [name, setName] = useState('');
@@ -24,18 +25,20 @@ function CreateEmployee(props) {
 
   return (
     <>
-    <h3>CREATE Employee</h3>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={e => setName(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      </label>
-      <button type="submit">Create</button>
-    </form>
+    <div className="form-container">
+      <h3>CREATE Employee</h3>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={name} onChange={e => setName(e.target.value)} />
+        </label>
+        <label>
+          Email:
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        </label>
+        <button type="submit">Create</button>
+      </form>
+    </div>
     </>
   );
 }

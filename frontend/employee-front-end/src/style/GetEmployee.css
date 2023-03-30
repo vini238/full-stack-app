@@ -1,0 +1,21 @@
+.employee-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid black;
+  }
+  
+  .employee-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

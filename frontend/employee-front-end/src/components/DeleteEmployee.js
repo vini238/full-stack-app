@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../style/DeleteEmployee.css";
 
 function DeleteEmployee(props) {
   const [id, setId] = useState('');
@@ -17,14 +18,16 @@ function DeleteEmployee(props) {
 
   return (
       <>
-    <h3>DELETE Employee</h3>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Id:
-        <input type="text" value={id} onChange={e => setId(e.target.value)} />
-      </label>
-      <button type="submit">Delete</button>
-    </form>
+    <div className="delete-employee-container">
+      <h3>DELETE Employee</h3>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Id:
+          <input type="text" value={id} onChange={e => setId(e.target.value)} />
+        </label>
+        <button type="submit">Delete</button>
+      </form>
+    </div>
     </>
   );
 }
