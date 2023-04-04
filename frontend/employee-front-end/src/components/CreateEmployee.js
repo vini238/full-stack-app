@@ -5,8 +5,7 @@ function CreateEmployee(props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     const employee = { name, email };
     fetch('http://localhost:8080/create', {
       method: 'POST',

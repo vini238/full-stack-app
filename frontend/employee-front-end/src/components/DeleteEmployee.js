@@ -4,8 +4,7 @@ import "../style/DeleteEmployee.css";
 function DeleteEmployee(props) {
   const [id, setId] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     fetch(`http://localhost:8080/delete/${id}`, {
       method: 'DELETE',
     })
